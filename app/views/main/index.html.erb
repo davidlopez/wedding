@@ -1,15 +1,19 @@
-<div class="snap-y snap-mandatory h-screen overflow-scroll scroll-smooth">
-  <div class="snap-center shrink-0">
-    <%= render "shared/intro" %>
+<% if device == "mobile" %>
+  <div class="snap-y snap-mandatory h-screen overflow-scroll scroll-smooth">
+    <%= render "shared/intro-mobile" %>
+    <%= render "shared/travel-mobile" %>
+    <%= render "shared/gallery-mobile" %>
   </div>
-  <div class="snap-center shrink-0">
-    <%= render "shared/travel" %>
-  </div>
-  <div class="snap-center shrink-0">
-    <% if device != "mobile" %>
+<% else %>
+  <div class="snap-y snap-mandatory h-screen overflow-scroll scroll-smooth">
+    <div class="snap-center shrink-0">
+      <%= render "shared/intro" %>
+    </div>
+    <div class="snap-center shrink-0">
+      <%= render "shared/travel" %>
+    </div>
+    <div class="snap-center shrink-0">
       <%= render "shared/gallery" %>
-    <% else %>
-      <%= render "shared/gallery-mobile" %>
-    <% end %>
+    </div>
   </div>
-</div>
+<% end %>
