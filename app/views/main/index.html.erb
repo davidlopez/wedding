@@ -1,0 +1,46 @@
+<div class="mx-auto flex md:aspect-[16/8.86] lg:aspect-[16/8.86] scroll-smooth">
+  <div class="flex scroll-smooth">
+    <ul class="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth">
+      <li id="m-img-1" class="first-ind shrink-0 snap-center w-fit">
+        <%= image_tag "hold_hands_ring.jpg" %>
+      </li>
+      <li id="m-img-2" class="shrink-0 snap-center w-fit">
+        <%= image_tag "m-leg.jpg" %>
+      </li>
+      <li id="m-img-3" class="shrink-0 snap-center w-fit">
+        <%= image_tag "look-into-eyes.jpg" %>
+      </li>
+      <li id="m-img-4" class="shrink-0 snap-center w-fit">
+        <%= image_tag "on-back.jpg" %>
+      </li>
+      <li id="m-img-5" class="shrink-0 snap-center w-fit">
+        <%= image_tag "kiss-cheek.jpg" %>
+      </li>
+    </ul>
+
+    <% if device != "mobile" %>
+      <div class="overflow-y-auto">
+        <ul class="flex flex-col overflow-y-auto snap-x snap-mandatory scroll-smooth">
+          <li class="first-ind snap-center w-fit">
+            <%= link_to(image_tag("hold_hands_ring.jpg"), "#m-img-1") %>
+          </li>
+          <li class="snap-center">
+            <%= link_to(image_tag("m-leg.jpg"), "#m-img-2") %>
+          </li>
+          <li class="snap-center">
+            <%= link_to(image_tag("look-into-eyes.jpg"), "#m-img-3") %>
+          </li>
+          <li class="snap-center">
+            <%= link_to(image_tag("on-back.jpg"), "#m-img-4") %>
+          </li>
+          <li class="snap-center">
+            <%= link_to(image_tag("kiss-cheek.jpg"), "#m-img-5") %>
+          </li>
+          <li class="snap-center">
+            <%= link_to(image_tag("kiss-cheek.jpg"), "#m-img-5") %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
