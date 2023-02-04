@@ -1,0 +1,6 @@
+<h1>Please enter the invite code provided on your invite.</h1>
+
+<%= form_with url: '/rsvp', method: :get do |form| %>
+  <%= form.text_field :invite_code, placeholder: "Invite Code" %>
+  <%= form.submit "Let's Go!" %>
+<% end %>

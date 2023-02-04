@@ -2,7 +2,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'leaf': "url('/assets/leaf.svg')"
+        'leaf': "url('/assets/leaf.svg')",
+        'holdhands': "url('hold_hands_ring.jpg')",
+        'm-leg': "url('m-leg.jpg')"
       }
     }
   },

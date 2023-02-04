@@ -1,26 +1,49 @@
-<div id="travel" class="aspect-[16/8.86] bg-green-200 flex items-center">
-  <div class="content mx-auto flex flex-col gap-20">
-    <div class="flex flex-col gap-3">
-      <div class="text-6xl font-extrabold text-center">Where is this thing happening?</div>
-      <div class="text-3xl font-medium text-center">Black Forest by Wedgewood Weddings</div>
-      <div class="text-3xl font-medium text-center">12375 Black Forest Rd, Colorado Springs, CO 80908</div>
+<!--<div id="travel" class="bg-green-200 flex justify-center items-center lg:h-[40rem]">-->
+<div class="flex justify-center items-center lg:h-[40rem] text-gray-800">
+  <div class="mx-auto flex flex-col gap-6 mx-4 my-6">
+    <div class="flex flex-col gap-3 p-2 rounded-lg bg-gray-800 text-neutral-50">
+      <div class="text-2xl md:text-6xl font-extrabold text-center">Where is this thing happening?</div>
+      <div class="text-xl md:text-3xl font-medium text-center">Black Forest by Wedgewood Weddings</div>
+      <div class="text-xl md:text-3xl font-medium text-center">12375 Black Forest Rd, Colorado Springs, CO 80908</div>
     </div>
-
-    <div class="container mx-auto flex gap-20 justify-center">
-      <div class="text-lg font-semibold bg-white text-center rounded-lg p-10">
-        <h3>Hotel 1</h3>
-        <h4>1234 waverly mtn, Colorado Springs, 80000</h4>
-        <h4>~10 mins away from venue</h4>
+    <div class="hidden md:block grow text-lg font-semibold bg-white text-center rounded-lg p-6">
+      <h3>Hampton Inn & Suites</h3>
+      <h4 class="bg-gray-800 text-white rounded-lg max-w-lg mx-auto p-3 text-"><span class="text-red-500">Warning</span>:
+        Limited
+        room blocks avalible for a discounted price. Cutoff date
+        for room blocks is May 23rd</h4>
+      <%= link_to "(719) 598-6911", "tel:7195986911", class: "text-blue-400" %>
+      <h4>1307 Republic Dr, Colorado Springs, CO 80921</h4>
+      <h4>~12 mins away from venue</h4>
+    </div>
+    <div class="flex flex-col lg:flex-row gap-6 content-center">
+      <div class="md:hidden grow text-lg font-semibold bg-white text-center rounded-lg p-6">
+        <h3>Hampton Inn & Suites</h3>
+        <h4 class="bg-gray-800 text-white rounded-lg max-w-lg mx-auto p-3"><span class="text-red-500">Warning</span>:
+          Limited
+          room blocks avalible for a discounted price. Cutoff date
+          for room blocks is May 23rd</h4>
+        <%= link_to "(719) 598-6911", "tel:7195986911", class: "text-blue-400" %>
+        <h4>1307 Republic Dr, Colorado Springs, CO 80921</h4>
+        <h4>~12 mins away from venue</h4>
       </div>
-      <div class="text-lg font-semibold bg-white text-center rounded-lg p-10">
-        <h3>Hotel 2</h3>
-        <h4>1234 waverly mtn, Colorado Springs, 80000</h4>
-        <h4>~10 mins away from venue</h4>
+      <div class="text-lg font-semibold bg-white text-center rounded-lg p-6">
+        <h3>Courtyard by Marriott</h3>
+        <%= link_to "(719) 635-8131", "tel:7196358131", class: "text-blue-400" %>
+        <h4>1130 Interquest Pkwy, Colorado Springs, CO 80921</h4>
+        <h4>~13 mins away from venue</h4>
       </div>
-      <div class="text-lg font-semibold bg-white text-center rounded-lg p-10">
-        <h3>Hotel 3</h3>
-        <h4>1234 waverly mtn, Colorado Springs, 80000</h4>
-        <h4>~10 mins away from venue</h4>
+      <div class="text-lg font-semibold bg-white text-center rounded-lg p-6">
+        <h3>WoodSpring Suites</h3>
+        <%= link_to "(719) 452-8477", "tel:7194528477", class: "text-blue-400" %>
+        <h4>1328 Republic Dr, Colorado Springs, CO 80921</h4>
+        <h4>~11 mins away from venue</h4>
+      </div>
+      <div class="text-lg font-semibold bg-white text-center rounded-lg p-6">
+        <h3>Drury Inn & Suites</h3>
+        <%= link_to "(719) 598-2500", "tel:7195982500", class: "text-blue-400" %>
+        <h4>1170 Interquest Pkwy, Colorado Springs, CO 80920</h4>
+        <h4>~12 mins away from venue</h4>
       </div>
     </div>
   </div>

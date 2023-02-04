@@ -1,0 +1,10 @@
+<h1>Select everyone who will be attending.</h1>
+<div class="rsvp-container">
+  <%= render partial: "rsvp", collection: @invite.rsvps %>
+</div>
+<%= form_with(url: '/rsvp', id: :bulk_actions_form, method: :patch) do |form| %>
+  <%= hidden_field(:invite, :id) %>
+  <%= form.button type: :submit do %>
+    Submit
+  <% end %>
+<% end %>

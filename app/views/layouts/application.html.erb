@@ -11,8 +11,13 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="l-back scroll-smooth">
+  <body class="bg-gray-800 scroll-smooth mx-auto">
     <%= render "shared/nav" %>
+    <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
