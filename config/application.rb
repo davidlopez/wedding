@@ -33,5 +33,6 @@ module WeddingOfficial
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.action_view.preload_links_header = false
   end
 end
