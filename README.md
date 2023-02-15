@@ -5,6 +5,8 @@ application up and running.
 
 Things you may want to cover:
 
+* RITA'S CAPTA
+
 * Ruby version
 
 * System dependencies
