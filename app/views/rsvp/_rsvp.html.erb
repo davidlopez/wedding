@@ -1,24 +1,20 @@
-<%= stylesheet_link_tag "checkbox", media: "all" %>
+<%#= stylesheet_link_tag "checkbox", media: "all" %>
 
 <div id="<%= dom_id rsvp %>">
-  <label class="checkbox-wrapper">
+  <label class="cursor-pointer p-1 border-2 border-white rounded-lg hover:border-opacity-10 hover:border-gray-800 flex items-center gap-3">
     <%= check_box_tag "rsvp_ids[]",
                       rsvp.id,
                       nil,
                       {
-                        class: 'checkbox-input',
+                        class: 'hidden peer',
                         multiple: true,
                         form: :bulk_actions_form,
                         checked: rsvp.attending
                       }
     %>
-    <span class="checkbox-tile">
-				<span class="checkbox-icon">
-						<rect width="256" height="256" fill="none"></rect>
-						<circle cx="96" cy="144.00002" r="10"></circle>
-						<circle cx="160" cy="144.00002" r="10"></circle>
-				</span>
-				<span class="checkbox-label"><%= rsvp.name %></span>
-			</span>
+    <svg class="border-4 border-opacity-10 border-gray-800 fill-white rounded-3xl peer-checked:bg-gray-800" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path>
+    </svg>
+    <span><%= rsvp.name %></span>
   </label>
 </div>

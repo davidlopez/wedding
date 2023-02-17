@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full">
   <head>
     <title>WeddingOfficial</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,13 +10,8 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body id="all-da-juice" class="bg-gray-800 scroll-smooth mx-auto">
+  <body id="all-da-juice" class="h-full bg-gray-800 scroll-smooth mx-auto">
     <%= render "shared/nav" %>
-    <% flash.each do |type, msg| %>
-      <div>
-        <%= msg %>
-      </div>
-    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -1,10 +1,12 @@
-<h1>Select everyone who will be attending.</h1>
-<div class="rsvp-container">
-  <%= render partial: "rsvp", collection: @invite.rsvps %>
+<div class="h-full flex flex-col justify-center">
+  <div class="w-11/12 md:w-auto mx-auto text-center flex flex-col items-center gap-6 bg-white px-8 py-12 rounded-lg text-gray-800 font-semibold border-opacity-5">
+    <h1 class="text-2xl">Select everyone who will be attending.</h1>
+    <div class="rsvp-container w-fit text-lef flex flex-col gap-4">
+      <%= render partial: "rsvp", collection: @invite.rsvps %>
+    </div>
+    <%= form_with(url: '/rsvp', id: :bulk_actions_form, method: :patch) do |form| %>
+      <%= hidden_field(:invite, :id) %>
+      <%= form.submit "Submit", class: "cursor-pointer bg-gray-800 text-white p-3 rounded-lg" %>
+    <% end %>
+  </div>
 </div>
-<%= form_with(url: '/rsvp', id: :bulk_actions_form, method: :patch) do |form| %>
-  <%= hidden_field(:invite, :id) %>
-  <%= form.button type: :submit do %>
-    Submit
-  <% end %>
-<% end %>
