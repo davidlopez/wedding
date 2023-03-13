@@ -6,7 +6,10 @@
     </div>
     <%= form_with(url: '/rsvp', id: :bulk_actions_form, method: :patch) do |form| %>
       <%= hidden_field(:invite, :id) %>
-      <%= form.submit "Submit", class: "cursor-pointer bg-gray-800 text-white p-3 rounded-lg" %>
+      <div class="flex flex-col gap-4">
+        <%= form.submit "Submit", class: "cursor-pointer bg-gray-800 text-white p-3 rounded-lg" %>
+        <%= form.submit "No one will be attending", class: "text-blue-400 z-20 underline underline-offset-4 cursor-pointer" %>
+      </div>
     <% end %>
   </div>
 </div>

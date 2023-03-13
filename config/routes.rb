@@ -4,6 +4,4 @@ Rails.application.routes.draw do
   patch '/rsvp', to: 'rsvp#update'
   resources :invite, only: :index
   resources :thanks, only: :index
-  resources :rsvps
-  resources :invites
 end
