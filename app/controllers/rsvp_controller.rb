@@ -2,7 +2,7 @@ class RsvpController < ApplicationController
   def index
     @invite = Invite.find_by(code: params[:invite_code].strip.upcase)
     if !@invite || @invite.rsvped
-      redirect_to '/invite', alert: @invite ? 'The RSVP for this invite has already been submitted.' : 'Invite not found. Try again.'
+      return redirect_to '/invite', alert: @invite ? 'The RSVP for this invite has already been submitted.' : 'Invite not found. Try again.'
     end
     logger.info "***** Invite #{@invite.id} has been found"
   end
